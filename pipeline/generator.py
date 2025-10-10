@@ -10,7 +10,6 @@ class Generator:
         self.prompt_template = prompts.SYSTEM_PROMPT
 
     def generate(self, retrived_data, query):
-
         prompt = self.prompt_template.format(retrived_data = retrived_data, query = query)
         response = ollama.chat(
         model = self.model_name,

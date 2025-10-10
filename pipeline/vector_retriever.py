@@ -60,4 +60,4 @@ class VectorRetriever:
             page = meta['page']
             retrived_data += f'source : {source}, page : {page}, \n content : {chunk} \n\n'
         
-        return query, retrived_data
+        return retrived_data
