@@ -8,15 +8,15 @@ class BM25Retriever:
     
     def add_documents(self, chunked_file):
         self.corpus = chunked_file
-        seperated_chunks = []
+        separated_chunks = []
         for chunk in chunked_file:
-            seperated_chunks.append(self.m.morphs(chunk['chunk']))
-        self.bm25 = BM25Okapi(seperated_chunks)
+            separated_chunks.append(self.m.morphs(chunk['chunk']))
+        self.bm25 = BM25Okapi(separated_chunks)
         
     
     def retrieve(self,  file_name, query, n = 7):
-        seperated_query = self.m.morphs(query)
-        top_n_docs = self.bm25.get_top_n(seperated_query, self.corpus, n = n)
+        separated_query = self.m.morphs(query)
+        top_n_docs = self.bm25.get_top_n(separated_query, self.corpus, n = n)
         retrieved_data = ''
         for doc in top_n_docs:
             page = doc['page']
