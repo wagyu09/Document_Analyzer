@@ -27,7 +27,7 @@ class DocumentLoader:
             str: The cleaned text.
         """
         text = re.sub(r'\s+', ' ', text)
-        text = re.sub(r'\.+','', text)
+        text = re.sub(r'\.{2,}', '', text)
         text = re.sub(r'전자공시시스템\s*dartfssorkr\s*Page\s*\d+','',text)
 
         return text.strip()

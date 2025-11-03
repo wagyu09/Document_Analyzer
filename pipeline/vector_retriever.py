@@ -53,11 +53,11 @@ class VectorRetriever:
             query_texts = [query],
             n_results = n_results
         )
-        retrived_data = ''
+        retrieved_data = ''
 
         for meta, chunk in zip(collected_data['metadatas'][0], collected_data['documents'][0]):
             source = meta['source']
             page = meta['page']
-            retrived_data += f'source : {source}, page : {page}, \n content : {chunk} \n\n'
+            retrieved_data += f'source : {source}, page : {page}, \n content : {chunk} \n\n'
         
-        return retrived_data
+        return retrieved_data

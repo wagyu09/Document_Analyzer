@@ -9,14 +9,16 @@ class Generator:
             self. options = options
         self.prompt_template = prompts.SYSTEM_PROMPT
 
-    def generate(self, retrived_data, query):
-        prompt = self.prompt_template.format(retrived_data = retrived_data, query = query)
+    def generate(self, retrieved_data, query):
+        prompt = self.prompt_template.format(retrieved_data = retrieved_data, query = query)
         response = ollama.chat(
         model = self.model_name,
         messages = [
             {'role' : 'user', 'content' : prompt}
         ],
-        options = self.options
+        options = self.options,
+        format = 'json'
+
         )
         outputs = response['message']['content']
 
