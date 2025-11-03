@@ -9,7 +9,7 @@ COLLECTION_NAME = "documents_collection"
 
 
 # Generator settings
-LLM_NAME = 'gpt-oss:20b'
+LLM_NAME = 'llama3.1:8b-instruct-q4_K_M'
 DEFAULT_OLLAMA_OPTIONS = {
     'temperature': 0.0,
     'repeat_penalty': 1.1,
