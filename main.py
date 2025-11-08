@@ -42,9 +42,10 @@ if __name__ == "__main__":
     file_path = filedialog.askopenfilename()
     run_indexing(file_path, chunker, embedder, retriever)
     query = input('Question : ')
-    retrieved_data = retriever.retrieve(query)
+    retrieved_data = retriever.retrieve(query,n_results = 5)
     outputs = generator.generate(retrieved_data,query)
     print(outputs)
+    print(retrieved_data)
 
 
 
