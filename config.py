@@ -9,9 +9,10 @@ COLLECTION_NAME = "documents_collection"
 
 
 # Generator settings
-LLM_NAME = 'gpt-oss:20b'
+LLM_NAME = 'gemma2:9b'
 DEFAULT_OLLAMA_OPTIONS = {
-    'temperature': 0.1,
+    'temperature': 0.0,
     'repeat_penalty': 1.1,
-    'seed': 42
+    'seed': 42,
+    'num_predict' : 4096
 }
