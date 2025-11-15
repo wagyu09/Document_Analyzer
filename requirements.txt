@@ -1,0 +1,17 @@
+chromadb
+konlpy
+kss
+ollama
+PyMuPDF
+rank-bm25
+sentence-transformers
+langchain-openai
+langchain-text-splitters
+matplotlib
+numpy
+openai
+pandas
+pydantic
+pydantic-settings
+python-dotenv
+ragas
