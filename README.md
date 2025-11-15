@@ -10,7 +10,7 @@ The project's goal is to compare the performance of two primary retriever method
 ## 1. Core Philosophy and Architecture
 
 The core pipeline... intentionally avoids LangChain, a high-abstraction framework that simplifies RAG implementation, in order to manually build and understand each component from the ground up.  
-LangChain was only used as a helper tool in the evalutaion.py script. Its only job was to use the LangchainLLMWrapper to connect Ragas to the evaluation LLM.
+LangChain was only used as a helper tool in the evaluation.py script. Its only job was to use the LangchainLLMWrapper to connect Ragas to the evaluation LLM.
 
 ---
 
@@ -66,17 +66,17 @@ OPENAI_API_KEY="sk-..."
 * Prepare the evaluation queries (`user_input`) and ground truth answers (`reference`) in the `evaluation_data.csv` file.
 
 ### 2. Run the Evaluation Script
-Run the evaluation using the `evalutaion.py` script. You can select the retriever to evaluate using the `--retriever` argument.
+Run the evaluation using the `evaluation.py` script. You can select the retriever to evaluate using the `--retriever` argument.
 
 ```bash
 # Evaluate only the BM25 retriever
-python evalutaion.py --retriever bm25
+python evaluation.py --retriever bm25
 
 # Evaluate only the Vector retriever
-python evalutaion.py --retriever vector
+python evaluation.py --retriever vector
 
 # Evaluate both retrievers
-python evalutaion.py --retriever all
+python evaluation.py --retriever all
 ```
 
 ### 3. Check Results
