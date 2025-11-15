@@ -6,7 +6,7 @@ OVERLAP_SIZE = 70
 EMBEDDING_MODEL = "intfloat/multilingual-e5-large-instruct"
 DB_PATH = "chroma_db"
 COLLECTION_NAME = "documents_collection"
-
+DICPATH = "/home/wagyu0923/miniconda3/envs/exaone/lib/mecab/dic/mecab-ko-dic"
 
 # Generator settings
 LLM_NAME = 'gemma2:9b'

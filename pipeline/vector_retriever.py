@@ -48,7 +48,7 @@ class VectorRetriever:
         documents=chunks
         )
         
-    def retrieve(self, query : str, n_results = 7):
+    def retrieve(self, query : str, n_results = 5):
         collected_data = self.collection.query(
             query_texts = [query],
             n_results = n_results
