@@ -41,7 +41,7 @@ The Generator model used was `gemma2:9b` via `ollama`, and the Evaluation model 
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/wagyu0923/Document_Analyzer.git](https://github.com/wagyu0923/Document_Analyzer.git)
+git clone [https://github.com/wagyu09/Document_Analyzer.git](https://github.com/wagyu0923/Document_Analyzer.git)
 cd Document_Analyzer
 ```
 
@@ -92,7 +92,7 @@ Document_Analyzer/
 ├── .env                  # (Must be created manually) Environment variables (API Key)
 ├── .gitignore            # Git ignore file
 ├── main.py               # RAG pipeline setup and indexing execution
-├── evalutaion.py         # Evaluation script (CLI)
+├── evaluation.py         # Evaluation script (CLI)
 ├── config.py             # Configuration management (model names, paths, etc.)
 ├── prompts.py            # Prompt management for LLM Generator
 ├── evaluation_data.csv   # QA dataset for evaluation
